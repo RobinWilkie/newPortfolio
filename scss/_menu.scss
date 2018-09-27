@@ -1,3 +1,4 @@
+// menu burger
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -14,14 +15,15 @@
     @include easeInOut;
   }
 
-  // for rotating menu burger to X
+  // for rotating menu burger to X - rotate all, hide middle line, do extra rotation on top and bottom line
   &.close {
     transform: rotate(180deg);
 
     .btn-line {
-      // line 1 - rotate
+      // line 1 - rotate 45 degrees clockwise
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
+        background-color: #fff;
       }
 
       // line 2 - hide
@@ -29,10 +31,104 @@
         opacity: 0;
       }
 
-      // line 3 - rotate
+      // line 3 - rotate 45 degrees anticlockwise
       &:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+        background-color: #fff;
       }
     }
+  }
+}
+
+// menu overlay when menu burger clicked
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-branding,
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: darken($primary-color, 5);
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    @include easeInOut;
+
+    &.show {
+      // slide in menu from top when burger clicked and show class added
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // image side
+  &-branding {
+    background: $primary-color;
+    transform: translate3d(0, 100%, 0);
+    @include easeInOut;
+
+    &.show {
+      // slide in menu from top
+      transform: translate3d(0, 0, 0);
+    }
+
+    .rwLogo {
+      width: 200px;
+      height: 200px;
+      background: url("../img/logo.png");
+    }
+  }
+
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include easeInOut;
+
+    &.show {
+      // slide in links from the right
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    padding: 0.7rem 0;
+    font-weight: 300;
+    text-decoration: none;
+    @include easeInOut;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// sass for loop to delay each link sliding in by 0.1 seconds
+@for $x from 1 through 5 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.15s;
   }
 }
