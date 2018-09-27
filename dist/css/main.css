@@ -91,39 +91,6 @@
 .nav-item:nth-child(5) {
   transition-delay: 0.75s; }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 70vh;
-    transform: translate3d(0, 100%, 0); }
-  .menu .nav-link {
-    font-size: 40px; }
-  .menu-branding {
-    height: 30vh;
-    transform: translate3d(0, -100%, 0); }
-    .menu-branding .rwLogo {
-      background: url("../img/logo-smaller.png");
-      width: 125px;
-      height: 125px; } }
-
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh;
-    font-size: 4rem; } }
-
 * {
   box-sizing: border-box; }
 
@@ -157,6 +124,13 @@ a {
   color: #fff;
   text-decoration: none; }
 
+.logoHome {
+  position: absolute;
+  z-index: 3;
+  left: 35px;
+  top: 35px;
+  cursor: pointer; }
+
 header {
   position: fixed;
   z-index: 2;
@@ -164,7 +138,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -178,3 +152,72 @@ main {
       margin-top: 20vh; }
     main#home span a {
       color: #c0a062; }
+  main#about {
+    margin-left: 5vw; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bio bio robinimage" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .robin-image {
+    grid-area: robinimage;
+    margin: auto;
+    border-radius: 50%;
+    border: solid 5px #c0a062; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.2rem; }
+  .about-info .job-1 {
+    grid-area: job1; }
+  .about-info .job-2 {
+    grid-area: job2; }
+  .about-info .job-2 {
+    grid-area: job2; }
+  .about-info .job {
+    background-color: #1d1c1c;
+    box-shadow: 0 4px 8px 0 rgba(192, 160, 98, 0.8);
+    padding: 0.7rem;
+    border-radius: 5px; }
+
+.main-footer {
+  text-align: center;
+  padding: 1rem; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 70vh;
+    transform: translate3d(0, 100%, 0); }
+  .menu .nav-link {
+    font-size: 40px; }
+  .menu-branding {
+    height: 30vh;
+    transform: translate3d(0, -100%, 0); }
+    .menu-branding .rwLogo {
+      background: url("../img/logo-smaller.png");
+      width: 125px;
+      height: 125px; }
+  .logoHome {
+    opacity: 0; }
+  .about-info {
+    grid-template-areas: "robinimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh;
+    font-size: 4rem; } }

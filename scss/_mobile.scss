@@ -48,6 +48,20 @@
       height: 125px;
     }
   }
+
+  .logoHome {
+    opacity: 0;
+  }
+
+  .about-info {
+    grid-template-areas:
+      "robinimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+    grid-template-columns: 1fr;
+  }
 }
 
 // mobile screens Sm
