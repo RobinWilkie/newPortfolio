@@ -1,0 +1,114 @@
+form {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+textarea {
+  background-color: #fff;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  border: 3px solid $secondary-color;
+  color: #474e57;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 8px;
+  margin: 0 0 10px 0;
+  @include easeInOut;
+
+  &:focus {
+    box-shadow: 0 0 15px rgba(192, 160, 98, 0.8);
+  }
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-family: "Josefin Sans", sans-serif;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: "Josefin Sans", sans-serif;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  font-family: "Josefin Sans", sans-serif;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-family: "Josefin Sans", sans-serif;
+}
+
+form button {
+  width: 40%;
+  background-color: $secondary-color;
+  color: #fff;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 8px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+}
+
+/* hover effect for button */
+
+@-webkit-keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+
+@keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+
+.hvr-ripple-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+
+.hvr-ripple-out:before {
+  content: "";
+  position: absolute;
+  border: $secondary-color solid 6px;
+  border-radius: 4px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.hvr-ripple-out:hover:before,
+.hvr-ripple-out:focus:before,
+.hvr-ripple-out:active:before {
+  -webkit-animation-name: hvr-ripple-out;
+  animation-name: hvr-ripple-out;
+}
+
+form button:active {
+  content: "thanks";
+}

@@ -1,5 +1,11 @@
 @import "config";
 @import "menu";
+@import "form";
+
+@font-face {
+  font-family: aquafont;
+  src: url("../fonts/aqua.ttf");
+}
 
 * {
   box-sizing: border-box;
@@ -20,6 +26,10 @@ body {
 }
 
 // HEADINGS
+h1 {
+  font-family: aquafont, "Josefin Sans", sans-serif;
+}
+
 h1,
 h2,
 h3 {
@@ -83,10 +93,14 @@ main {
   }
 
   &#about {
-    margin-left: 5vw;
+    margin: 0 5vw;
   }
 
   &#work {
+    margin: 0 5vw;
+  }
+
+  &#contact {
     margin: 0 5vw;
   }
 }

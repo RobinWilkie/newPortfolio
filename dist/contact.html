@@ -11,7 +11,7 @@
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <title>About Robin Wilkie Web Development</title>
+    <title>Contact Robin Wilkie - Web Development</title>
 </head>
 
 <body>
@@ -31,13 +31,13 @@
                 <li class="nav-item">
                     <a href="index.html" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item current">
+                <li class="nav-item">
                     <a href="about.html" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
                     <a href="work.html" class="nav-link">Work</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item current">
                     <a href="contact.html" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
@@ -47,39 +47,20 @@
         </nav>
     </header>
 
-    <main id="about">
-        <h1 class="lg-heading text-secondary">ABOUT</h1>
+    <main id="contact">
+        <h1 class="lg-heading text-secondary">CONTACT</h1>
         <h2 class="sm-heading">Robin Wilkie</h2>
 
-        <div class="about-info">
-
-            <div class="bio">
-                <h3 class="text-secondary">About me</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta unde asperiores maiores minus iste,
-                    magni quibusdam sapiente tenetur laborum aut impedit deleniti perferendis quos saepe optio, fuga
-                    eum! Asperiores, laudantium?</p>
-            </div>
-
-            <img src="img/robinwilkie.jpg" alt="Robin Wilkie" class="robin-image">
-
-            <div class="job job-1">
-                <h3>Picture Editor</h3>
-                <h5>Metro Newspaper</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum itaque minima beatae alias
-                    inventore odit repellat ullam distinctio laudantium.</p>
-            </div>
-            <div class="job job-2">
-                <h3>HND Interactive Media</h3>
-                <h5>Clyde College</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum itaque minima beatae alias
-                    inventore odit repellat ullam distinctio laudantium.</p>
-            </div>
-            <div class="job job-3">
-                <h3>BA Web and Mobile Development</h3>
-                <h5>UWS</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum itaque minima beatae alias
-                    inventore odit repellat ullam distinctio laudantium.</p>
-            </div>
+        <div class="contact-form">
+            <form id="contactForm" role="form" method="post" action="">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="eg: John Smith" required>
+                <label>Email</label>
+                <input type="email" name="email" placeholder="eg: example@something.com" required>
+                <label>Message</label>
+                <textarea name="message" rows="6" cols="30" placeholder="Enter message here..." required></textarea>
+                <button class="hvr-ripple-out" type="submit" value="submit">Submit</button>
+            </form>
         </div>
 
     </main>
