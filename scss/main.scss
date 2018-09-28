@@ -42,7 +42,7 @@ a {
 
 .logoHome {
   position: absolute;
-  z-index: 3;
+  z-index: -2;
   left: 35px;
   top: 35px;
   cursor: pointer;
@@ -85,6 +85,10 @@ main {
   &#about {
     margin-left: 5vw;
   }
+
+  &#work {
+    margin: 0 5vw;
+  }
 }
 
 // About page styles
@@ -126,6 +130,41 @@ main {
     box-shadow: 0 4px 8px 0 rgba(192, 160, 98, 0.8);
     padding: 0.7rem;
     border-radius: 5px;
+  }
+}
+
+// Work and Projects page styles
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+
+  img {
+    width: 100%;
+    border-radius: 5px;
+    @include easeInOut;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px 0 rgba(192, 160, 98, 0.8);
+    }
+  }
+}
+
+// button styles
+
+.item-links {
+  display: flex;
+  justify-content: center;
+}
+
+.project-link {
+  padding: 5px;
+  @include easeInOut;
+
+  &:hover {
+    color: $secondary-color;
   }
 }
 

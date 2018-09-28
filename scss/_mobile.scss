@@ -50,7 +50,7 @@
   }
 
   .logoHome {
-    opacity: 0;
+    z-index: -2;
   }
 
   .about-info {
@@ -62,6 +62,10 @@
       "job3";
     grid-template-columns: 1fr;
   }
+
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // mobile screens Sm
@@ -69,5 +73,20 @@
   main#home h1 {
     margin-top: 10vh;
     font-size: 4rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    align-items: center;
+    text-align: center;
+
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-size: 3rem;
+    }
   }
 }
