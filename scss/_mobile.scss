@@ -91,6 +91,19 @@
     }
   }
 
+  .about-info .robin-image {
+    width: 100%;
+  }
+
+  .contactContainer {
+    flex-direction: column;
+  }
+
+  .contactLogo {
+    width: 60vw;
+    margin-top: 5rem;
+  }
+
   form {
     width: 60vw;
   }

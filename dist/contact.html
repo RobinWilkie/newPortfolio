@@ -11,6 +11,7 @@
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <title>Contact Robin Wilkie - Web Development</title>
 </head>
 
@@ -41,7 +42,7 @@
                     <a href="contact.html" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a href="blog" class="nav-link">Blog</a>
+                    <a href="https://www.robinwilkie.co.uk/blog/" target="_blank" class="nav-link">Blog</a>
                 </li>
             </ul>
         </nav>
@@ -51,16 +52,21 @@
         <h1 class="lg-heading text-secondary">CONTACT</h1>
         <h2 class="sm-heading">Robin Wilkie</h2>
 
-        <div class="contact-form">
-            <form id="contactForm" role="form" method="post" action="">
-                <label>Name</label>
-                <input type="text" name="name" placeholder="eg: John Smith" required>
-                <label>Email</label>
-                <input type="email" name="email" placeholder="eg: example@something.com" required>
-                <label>Message</label>
-                <textarea name="message" rows="6" cols="30" placeholder="Enter message here..." required></textarea>
-                <button class="hvr-ripple-out" type="submit" value="submit">Submit</button>
-            </form>
+        <div class="contactContainer">
+            <div class="contact-form">
+                <form id="contactForm" role="form" method="post" action="">
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="eg: John Smith" required>
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="eg: example@something.com" required>
+                    <label>Message</label>
+                    <textarea name="message" rows="6" cols="30" placeholder="Enter message here..." required></textarea>
+                    <button class="hvr-ripple-out" type="submit" value="submit">Submit</button>
+                </form>
+            </div>
+            <div class="contactLogo">
+                <i class="far fa-paper-plane fa-10x"></i>
+            </div>
         </div>
 
     </main>
@@ -69,6 +75,7 @@
         &copy; Robin Wilkie - 2018
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

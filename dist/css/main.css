@@ -91,6 +91,99 @@
 .nav-item:nth-child(5) {
   transition-delay: 0.75s; }
 
+.button {
+  background: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  border: none;
+  margin: 5px 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out 0s; }
+  .button:hover {
+    color: #c0a062; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.modal-content {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  margin: 10% auto;
+  color: #000000;
+  width: 70%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: openModal;
+  animation-duration: 1s; }
+
+@keyframes openModal {
+  from {
+    opacity: 0;
+    transform: scale(0); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+
+.closeBtn {
+  color: #444;
+  float: right;
+  font-size: 2.5rem;
+  margin: 0 1rem;
+  transition: all 0.4s ease-in-out 0s; }
+  .closeBtn:hover, .closeBtn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer; }
+
+.modalHeader {
+  background-color: #c0a062;
+  color: #444;
+  padding: 1.5rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px; }
+
+.modalBody {
+  padding: 1rem 1.5rem;
+  display: flex; }
+
+.projectText {
+  width: 60%; }
+  .projectText a {
+    color: #c0a062; }
+
+.projectImages {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.projectPic {
+  width: 90%;
+  margin: 1rem 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8); }
+
+.modalFooter {
+  background-color: #c0a062;
+  color: #444;
+  padding: 0.8rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  text-align: center; }
+
+.modalFooter a {
+  color: #444;
+  transition: all 0.4s ease-in-out 0s; }
+  .modalFooter a:hover {
+    color: #000; }
+
 form {
   width: 40vw;
   display: flex;
@@ -248,18 +341,28 @@ main {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
   main .icons {
-    margin-top: 1rem; }
+    margin-top: 2rem; }
     main .icons a {
       padding: 0.4rem;
       transition: all 0.4s ease-in-out 0s; }
       main .icons a:hover {
         color: #c0a062; }
   main#home {
-    overflow: hidden; }
+    overflow: hidden;
+    margin: 0 5vw; }
     main#home h1 {
       margin-top: 20vh; }
     main#home span a {
       color: #c0a062; }
+    main#home .btn {
+      border: 2px solid #fff;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      font-size: 1.1rem;
+      transition: all 0.4s ease-in-out 0s; }
+      main#home .btn:hover {
+        border: 2px solid #c0a062;
+        background-color: #c0a062; }
   main#about {
     margin: 0 5vw; }
   main#work {
@@ -280,6 +383,8 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.2rem; }
+  .about-info .txt-type > .txt {
+    border-right: 0.2rem solid #fff; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
@@ -299,10 +404,38 @@ main {
   .projects img {
     width: 100%;
     border-radius: 5px;
+    cursor: pointer;
     transition: all 0.4s ease-in-out 0s; }
-    .projects img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 8px 0 rgba(192, 160, 98, 0.8); }
+
+.container {
+  position: relative; }
+
+.overlay {
+  position: absolute;
+  transition: all 0.4s ease-in-out 0s;
+  opacity: 0;
+  background-color: rgba(192, 160, 98, 0.8); }
+
+.container:hover .overlay {
+  opacity: 1; }
+
+.overlayText {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer; }
+
+.overlayFade {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6); }
 
 .item-links {
   display: flex;
@@ -313,6 +446,14 @@ main {
   transition: all 0.4s ease-in-out 0s; }
   .project-link:hover {
     color: #c0a062; }
+
+.contactContainer {
+  display: flex; }
+
+.contactLogo {
+  width: 40vw;
+  display: flex;
+  justify-content: center; }
 
 .main-footer {
   text-align: center;
@@ -367,5 +508,12 @@ main {
       line-height: 1;
       margin-bottom: 1rem;
       font-size: 2.6rem; }
+  .about-info .robin-image {
+    width: 100%; }
+  .contactContainer {
+    flex-direction: column; }
+  .contactLogo {
+    width: 60vw;
+    margin-top: 5rem; }
   form {
     width: 60vw; } }

@@ -11,6 +11,7 @@
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <title>My Work - Robin Wilkie Web Development</title>
 </head>
 
@@ -41,7 +42,7 @@
                     <a href="contact.html" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a href="blog" class="nav-link">Blog</a>
+                    <a href="https://www.robinwilkie.co.uk/blog/" target="_blank" class="nav-link">Blog</a>
                 </li>
             </ul>
         </nav>
@@ -53,128 +54,540 @@
 
         <div class="projects">
             <div class="item">
-                <a href="#">
-                    <img src="img/thumbs/harrison-scott-thumb.png" alt="Harrison Scott Website screen grab">
-                </a>
+                <div class="container">
+                    <img class="modal-img" data-index="1" src="img/thumbs/harrison-scott-thumb.png" alt="Harrison Scott Website screen grab">
+                    <div class="overlay overlayFade">
+                        <div class="overlayText modal-img" data-index="1">Harrison Scott Associates</div>
+                    </div>
+                </div>
                 <div class="item-links">
-                    <a href="#" class="project-link">
+                    <button id="modalBtn" class="button modal-img" data-index="1"><i class="fas fa-info-circle"></i>
+                        Details</button>
+                    <a href="https://harrison-scott.com/" target="_blank" class="button">
                         <i class="fas fa-eye"></i> Project
-                    </a>
-                    <a href="#" class="project-link">
-                        <i class="fas fa-info-circle"></i> Details
                     </a>
                 </div>
             </div>
 
             <div class="item">
-                <a href="#">
-                    <img src="img/thumbs/subcrawlThumb.jpg" alt="view of subcrawl app screens on mobile">
-                </a>
+                <div class="container">
+                    <img class="projectImage modal-img" data-index="2" src="img/thumbs/subcrawlThumb.jpg" alt="view of subcrawl app screens on mobile">
+                    <div class="overlay overlayFade">
+                        <div class="overlayText modal-img" data-index="2">Glasgow Subcrawl App</div>
+                    </div>
+                </div>
                 <div class="item-links">
-                    <a href="#" class="project-link">
+                    <button id="modalBtn" class="button modal-img" data-index="2"><i class="fas fa-info-circle"></i>
+                        Details</button>
+                    <a href="https://play.google.com/store/apps/details?id=com.subcrawl&hl=en_GB" target="_blank" class="button">
                         <i class="fas fa-eye"></i> Project
-                    </a>
-                    <a href="#" class="project-link">
-                        <i class="fas fa-info-circle"></i> Details
                     </a>
                 </div>
             </div>
 
             <div class="item">
-                <a href="#">
-                    <img src="img/thumbs/msp-thumb.png" alt="MSP Recruitment Solutions website home screen">
-                </a>
+                <div class="container">
+                    <img class="projectImage modal-img" data-index="3" src="img/thumbs/msp-thumb.png" alt="MSP Recruitment Solutions website home screen">
+                    <div class="overlay overlayFade">
+                        <div class="overlayText modal-img" data-index="3">MSP Recruitment Solutions</div>
+                    </div>
+                </div>
                 <div class="item-links">
-                    <a href="#" class="project-link">
+                    <button id="modalBtn" class="button modal-img" data-index="3"><i class="fas fa-info-circle"></i>
+                        Details</button>
+                    <a href="https://msp-recruitmentsolutions.com/" target="_blank" class="button">
                         <i class="fas fa-eye"></i> Project
-                    </a>
-                    <a href="#" class="project-link">
-                        <i class="fas fa-info-circle"></i> Details
                     </a>
                 </div>
             </div>
 
             <div class="item">
-                <a href="#">
-                    <img src="img/thumbs/manorviewThumb.jpg" alt="Charity tracker for Manorview">
-                </a>
+                <div class="container">
+                    <img class="projectImage modal-img" data-index="4" src="img/thumbs/manorviewThumb.jpg" alt="Charity tracker for Manorview">
+                    <div class="overlay overlayFade">
+                        <div class="overlayText modal-img" data-index="4">Manorview Charity Trackers</div>
+                    </div>
+                </div>
                 <div class="item-links">
-                    <a href="#" class="project-link">
+                    <button id="modalBtn" class="button modal-img" data-index="4"><i class="fas fa-info-circle"></i>
+                        Details</button>
+                    <a href="https://www.robinwilkie.co.uk/tracker/manorview.html" target="_blank" class="button">
                         <i class="fas fa-eye"></i> Project
-                    </a>
-                    <a href="#" class="project-link">
-                        <i class="fas fa-info-circle"></i> Details
                     </a>
                 </div>
             </div>
 
             <div class="item">
-                <a href="#">
-                    <img src="img/thumbs/TapsThumb.jpg" alt="Taps Oan home screen grab">
-                </a>
+                <div class="container">
+                    <img class="projectImage modal-img" data-index="5" src="img/thumbs/TapsThumb.jpg" alt="Taps Oan home screen grab">
+                    <div class="overlay overlayFade">
+                        <div class="overlayText modal-img" data-index="5">Taps Oan Website</div>
+                    </div>
+                </div>
                 <div class="item-links">
-                    <a href="#" class="project-link">
+                    <button id="modalBtn" class="button modal-img" data-index="5"><i class="fas fa-info-circle"></i>
+                        Details</button>
+                    <a href="http://robin.hnd-int.co.uk/index.html" target="_blank" class="button">
                         <i class="fas fa-eye"></i> Project
-                    </a>
-                    <a href="#" class="project-link">
-                        <i class="fas fa-info-circle"></i> Details
                     </a>
                 </div>
             </div>
 
             <div class="item">
-                <a href="#">
-                    <img src="img/thumbs/georgewilkieThumb.jpg" alt="screen grab of George Wilkie author website">
-                </a>
+                <div class="container">
+                    <img class="projectImage modal-img" data-index="6" src="img/thumbs/georgewilkieThumb.jpg" alt="screen grab of George Wilkie author website">
+                    <div class="overlay overlayFade">
+                        <div class="overlayText modal-img" data-index="6">George Wilkie Website</div>
+                    </div>
+                </div>
                 <div class="item-links">
-                    <a href="#" class="project-link">
+                    <button id="modalBtn" class="button modal-img" data-index="6"><i class="fas fa-info-circle"></i>
+                        Details</button>
+                    <a href="http://georgewilkie.co.uk/index.html" target="_blank" class="button">
                         <i class="fas fa-eye"></i> Project
-                    </a>
-                    <a href="#" class="project-link">
-                        <i class="fas fa-info-circle"></i> Details
                     </a>
                 </div>
             </div>
 
             <div class="item">
-                <a href="#">
-                    <img src="img/thumbs/appmuseumportfolioThumb.jpg" alt="Glasgow Museum app design">
-                </a>
+                <div class="container">
+                    <img class="projectImage modal-img" data-index="7" src="img/thumbs/appmuseumportfolioThumb.jpg" alt="Glasgow Museum app design">
+                    <div class="overlay overlayFade">
+                        <div class="overlayText modal-img" data-index="7">Glasgow Museums App</div>
+                    </div>
+                </div>
                 <div class="item-links">
-                    <a href="#" class="project-link">
+                    <button id="modalBtn" class="button modal-img" data-index="7"><i class="fas fa-info-circle"></i>
+                        Details</button>
+                    <a href="https://www.robinwilkie.co.uk/projects/museum/" target="_blank" class="button">
                         <i class="fas fa-eye"></i> Project
-                    </a>
-                    <a href="#" class="project-link">
-                        <i class="fas fa-info-circle"></i> Details
                     </a>
                 </div>
             </div>
 
             <div class="item">
-                <a href="#">
-                    <img src="img/thumbs/ScoutsThumb.jpg" alt="Scouts website screen grab">
-                </a>
+                <div class="container">
+                    <img class="projectImage modal-img" data-index="8" src="img/thumbs/ScoutsThumb.jpg" alt="Scouts website screen grab">
+                    <div class="overlay overlayFade">
+                        <div class="overlayText modal-img" data-index="8">Obanshire Cub Scouts</div>
+                    </div>
+                </div>
                 <div class="item-links">
-                    <a href="#" class="project-link">
+                    <button id="modalBtn" class="button modal-img" data-index="8"><i class="fas fa-info-circle"></i>
+                        Details</button>
+                    <a href="#" class="button">
                         <i class="fas fa-eye"></i> Project
-                    </a>
-                    <a href="#" class="project-link">
-                        <i class="fas fa-info-circle"></i> Details
                     </a>
                 </div>
             </div>
 
             <div class="item">
-                <a href="#">
-                    <img src="img/thumbs/DignansPortfolioIndexThumb.jpg" alt="Dignans catering website screen grab">
-                </a>
+                <div class="container">
+                    <img class="projectImage modal-img" data-index="9" src="img/thumbs/DignansPortfolioIndexThumb.jpg"
+                        alt="Dignans catering website screen grab">
+                    <div class="overlay overlayFade">
+                        <div class="overlayText modal-img" data-index="9">Dignans Catering Website</div>
+                    </div>
+                </div>
                 <div class="item-links">
-                    <a href="#" class="project-link">
+                    <button id="modalBtn" class="button modal-img" data-index="9"><i class="fas fa-info-circle"></i>
+                        Details</button>
+                    <a href="https://www.robinwilkie.co.uk/projects/dignans/index.html" target="_blank" class="button">
                         <i class="fas fa-eye"></i> Project
                     </a>
-                    <a href="#" class="project-link">
-                        <i class="fas fa-info-circle"></i> Details
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="container">
+                    <img class="projectImage modal-img" data-index="10" src="img/thumbs/robinwilkiethumb.jpg" alt="Dignans catering website screen grab">
+                    <div class="overlay overlayFade">
+                        <div class="overlayText modal-img" data-index="10">Robin Wilkie Website</div>
+                    </div>
+                </div>
+                <div class="item-links">
+                    <button id="modalBtn" class="button modal-img" data-index="10"><i class="fas fa-info-circle"></i>
+                        Details</button>
+                    <a href="https://www.robinwilkie.co.uk/" target="_blank" class="button">
+                        <i class="fas fa-eye"></i> Project
                     </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal content for projects -->
+        <div id="projectModal1" class="modal" data-index="1">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <div class="modalHeader">
+                    <h2>Harrison Scott Associates</h2>
+                </div>
+                <div class="modalBody">
+                    <div class="projectText">
+                        <p>Redesign and Development - 2018</p>
+                        <h4>The Brief</h4>
+                        <p>The client, Harrison Scott Associates - The UK's largest recruitment consultancy in the
+                            Printing, Packaging and Paper industries,
+                            wanted a completed redesign and redevelopment of their
+                            existing website.</p>
+                        <p>The new site I created was completely responsive with video backgrounds and fully optimised
+                            for
+                            fast loading and included a client dashboard for uploading new vacancies, press articles,
+                            viewing candidate details and analytics of website traffic.</p>
+                        <h4>Included</h4>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>PHP</li>
+                            <li>JS</li>
+                            <li>jQuery</li>
+                            <li>Flexbox</li>
+                            <li>Wordpress</li>
+                            <li>SEO</li>
+                        </ul>
+                    </div>
+                    <div class="projectImages">
+                        <img src="img/work/harrison-scott.jpg" alt="harrison scott homepage" class="projectPic">
+                        <img src="img/work/harrison-scott-team.jpg" alt="harrison scott about page" class="projectPic">
+                        <img src="img/work/harrison-scott-vacancies.jpg" alt="harrison scott vacancies page" class="projectPic">
+                    </div>
+                </div>
+                <div class="modalFooter">
+                    <a href="https://harrison-scott.com/" target="_blank"><i class="fas fa-eye"></i> View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="projectModal2" class="modal" data-index="2">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <div class="modalHeader">
+                    <h2>Glasgow Subcrawl App</h2>
+                </div>
+                <div class="modalBody">
+                    <div class="projectText">
+                        <p>Mobile App - 2017</p>
+                        <h4>The Brief</h4>
+                        <p>This app was developed as a guide for the Glasgow Subcrawl, a traditional pub crawl at each
+                            of the Glasgow Underground
+                            train stops.
+
+                            The app shows maps to the nearest pubs at every stop and how long the pubs take to walk
+                            to. It also give a brief description of the pubs, their address and opening/closing times.
+
+                            The app also features info on the Subway with details on pricing and first train/last train
+                            times along with some handy tips and tricks to navigating the subcrawl.
+                        </p>
+                        <p>I created this app during the summer between college and university to try and get to grips
+                            with React Native and producing an app that I could actually distribute from the <a href="https://play.google.com/store/apps/details?id=com.subcrawl&hl=en_GB"
+                                target="_blank">Google
+                                Play Store</a> and the <a href="https://itunes.apple.com/gb/app/glasgow-subcrawl/id1278265869?mt=8"
+                                target="_blank">Apple Store on iTunes</a>.</p>
+                        <p>The app had been pretty popular (especially with students) with over 1000 downloads so far
+                            and was even <a href="https://www.heraldscotland.com/news/15484504.New_app_dedicated_to_Glasgow_s_sub_crawl_trail_launched/"
+                                target="_blank">featured
+                                in The Herald here</a>.</p>
+                        <h4>Included</h4>
+                        <ul>
+                            <li>React Native</li>
+                            <li>CSS3</li>
+                            <li>Google Maps API</li>
+                            <li>JS</li>
+                        </ul>
+                    </div>
+                    <div class="projectImages">
+                        <img src="img/work/subcrawl-pages.jpg" alt="Glasgow subcrawl app pages" class="projectPic">
+                        <img src="img/work/subcrawl-mockup.jpg" alt="glasgow subcrawl app on mobile device" class="projectPic">
+                    </div>
+                </div>
+                <div class="modalFooter">
+                    <a href="https://itunes.apple.com/gb/app/glasgow-subcrawl/id1278265869?mt=8" target="_blank"><i
+                            class="fas fa-eye"></i> View Project (ios)</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.subcrawl&hl=en_GB" target="_blank"><i
+                            class="fas fa-eye"></i> View Project (android)</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="projectModal3" class="modal" data-index="3">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <div class="modalHeader">
+                    <h2>MSP Recruitment Solutions</h2>
+                </div>
+                <div class="modalBody">
+                    <div class="projectText">
+                        <p>Website design and development - 2018</p>
+                        <h4>The Brief</h4>
+                        <p>MSP Recruitment Solutions work in the Print and packaging recruitment sector. The brief was
+                            to design and develop an engaging and responsive website to showcase the clients job
+                            postings, services and contact details.</p>
+                        <p>The website is completely responsive and fully optimised. Wordpress was utilised on the
+                            backend
+                            for a client dashboard, used for uploading new jobs, news storie and viewing website
+                            traffic analytics.</p>
+                        <h4>Included</h4>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>PHP</li>
+                            <li>JS</li>
+                            <li>jQuery</li>
+                            <li>Flexbox</li>
+                            <li>Wordpress</li>
+                            <li>SEO</li>
+                        </ul>
+                    </div>
+                    <div class="projectImages">
+                        <img src="img/work/msp-recruitement-home.jpg" alt="harrison scott homepage" class="projectPic">
+                        <img src="img/work/msp-recruitment-news.jpg" alt="harrison scott about page" class="projectPic">
+                        <img src="img/work/msp-recruitment-contact.jpg" alt="harrison scott vacancies page" class="projectPic">
+                    </div>
+                </div>
+                <div class="modalFooter">
+                    <a href="https://msp-recruitmentsolutions.com/" target="_blank"><i class="fas fa-eye"></i> View
+                        Project</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="projectModal4" class="modal" data-index="4">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <div class="modalHeader">
+                    <h2>Manorview Charity Trackers</h2>
+                </div>
+                <div class="modalBody">
+                    <div class="projectText">
+                        <p>Charity total trackers - 2017</p>
+                        <h4>The Brief</h4>
+                        <p>Manorview Hotels &amp; Leisure Group needed animated charity trackers for their different
+                            venues to show the current total for their charity efforts. These trackers are shown on
+                            their own employee app - <a href="https://play.google.com/store/apps/details?id=hr.apps.n10829&hl=en_GB"
+                                target="_blank">IRIS by MVG</a></p>
+                        <p>The trackers were mainly developed with JavaScript and jQuery to animate when opened and
+                            coded in a way to make it simple to update totals and amounts.</p>
+                        <h4>Included</h4>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JS</li>
+                            <li>jQuery</li>
+                            <li>Flexbox</li>
+                        </ul>
+                    </div>
+                    <div class="projectImages">
+                        <img src="img/work/manorview-tracker-1.jpg" alt="manorview charity tracker" class="projectPic">
+                        <img src="img/work/manorview-tracker-2.jpg" alt="manorview charity tracker" class="projectPic">
+                    </div>
+                </div>
+                <div class="modalFooter">
+                    <a href="https://www.robinwilkie.co.uk/tracker/manorview.html#" target="_blank"><i class="fas fa-eye"></i>
+                        View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="projectModal5" class="modal" data-index="5">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <div class="modalHeader">
+                    <h2>Taps Oan Website</h2>
+                </div>
+                <div class="modalBody">
+                    <div class="projectText">
+                        <p>College project - 2017</p>
+                        <h4>The Brief</h4>
+                        <p>The Taps Oan website was designed and developed as a college project during my HND
+                            Interactive Media course. I was given free rein to produce an e-business website for any
+                            product and so I came up with a craft beer site. (If you're not from Scotland, the name is
+                            a play on the phrase <a href="https://www.urbandictionary.com/define.php?term=Taps%20aff">Taps
+                                aff!</a>)</p>
+                        <p>The logo and fake labels were produced in Illustrator and Photoshop and the site was
+                            developed using HTML5, CSS3, JS, jQuery and PHP for signing up/signing in.</p>
+                        <h4>Included</h4>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JS</li>
+                            <li>jQuery</li>
+                            <li>PHP</li>
+                            <li>Photoshop</li>
+                            <li>Adobe Illustrator</li>
+                            <li>Google Maps API</li>
+                        </ul>
+                    </div>
+                    <div class="projectImages">
+                        <img src="img/work/taps-oan-homepage.jpg" alt="Taps Oan homepage" class="projectPic">
+                        <img src="img/work/taps-oan-pilsner.jpg" alt="Taps Oan product page" class="projectPic">
+                        <img src="img/work/taps-oan-about.jpg" alt="Taps Oan about page" class="projectPic">
+
+                    </div>
+                </div>
+                <div class="modalFooter">
+                    <a href="http://robin.hnd-int.co.uk/index.html" target="_blank"><i class="fas fa-eye"></i> View
+                        Project</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="projectModal6" class="modal" data-index="6">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <div class="modalHeader">
+                    <h2>George Wilkie Website</h2>
+                </div>
+                <div class="modalBody">
+                    <div class="projectText">
+                        <p>Author Website - 2016</p>
+                        <h4>The Brief</h4>
+                        <p>My father has started writing ebooks since retiring so I offered to make him a website to
+                            publicise them. This was when I was just starting out developing websites so at some point
+                            I'd like to go back and redesign the website.</p>
+                        <p>I also took the author photographs for him and designed the ebook covers in Photoshop.</p>
+                        <h4>Included</h4>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JS</li>
+                            <li>PHP</li>
+                        </ul>
+                    </div>
+                    <div class="projectImages">
+                        <img src="img/work/george-wilkie-homepage.jpg" alt="George Wilkie homepage" class="projectPic">
+                        <img src="img/work/george-wilkie-about.jpg" alt="George Wilkie about page" class="projectPic">
+                        <img src="img/work/george-wilkie-works.jpg" alt="George Wilkie ebooks page" class="projectPic">
+
+                    </div>
+                </div>
+                <div class="modalFooter">
+                    <a href="http://georgewilkie.co.uk/" target="_blank"><i class="fas fa-eye"></i> View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="projectModal7" class="modal" data-index="7">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <div class="modalHeader">
+                    <h2>Glasgow Museums App</h2>
+                </div>
+                <div class="modalBody">
+                    <div class="projectText">
+                        <p>College Project - 2016</p>
+                        <h4>The Brief</h4>
+                        <p>The Glasgow Museums App was a college project for my HND Interactive Media course. The brief
+                            was to develop an app giving a guide to a selection of museums in Glasgow using jQuery
+                            mobile that would work on smaller mobile devices.</p>
+                        <p>This project was an introduction to a touch friendly, mobile framework. Vanilla javaScript
+                            was used to manipulate the DOM, validate forms, score a multichoice quiz and calculating
+                            ticket pricing totals</p>
+                        <h4>Included</h4>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JS</li>
+                            <li>jQuery</li>
+                            <li>jQuery Mobile</li>
+                        </ul>
+                    </div>
+                    <div class="projectImages">
+                        <img src="img/work/glasgow-museums-1.jpg" alt="Glasgow Museums app page" class="projectPic">
+                        <img src="img/work/glasgow-museums-2.jpg" alt="Glasgow Museums app page" class="projectPic">
+                    </div>
+                </div>
+                <div class="modalFooter">
+                    <a href="https://www.robinwilkie.co.uk/projects/museum/" target="_blank"><i class="fas fa-eye"></i>
+                        View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="projectModal8" class="modal" data-index="8">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <div class="modalHeader">
+                    <h2>Obanshire Cub Scouts Website</h2>
+                </div>
+                <div class="modalBody">
+                    <p>modal test here</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti at, facilis numquam
+                        consequuntur amet modi doloribus quos doloremque sit rem.</p>
+                </div>
+                <div class="modalFooter">
+                    <a href="#"><i class="fas fa-eye"></i> View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="projectModal9" class="modal" data-index="9">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <div class="modalHeader">
+                    <h2>Dignans Catering Website</h2>
+                </div>
+                <div class="modalBody">
+                    <div class="projectText">
+                        <p>College Project - 2016</p>
+                        <h4>The Brief</h4>
+                        <p>The Dignans Catering website was a college project for my HND Interactive Media course. The
+                            brief
+                            was to develop an website for an online business, in this case a catering company. This was
+                            the first website that I developed and isn't as responsive as sites that I have produced
+                            since as I was still learning HTML and CSS. The main reason this site is here is to remind
+                            me of my progress in web development.</p>
+                        <h4>Included</h4>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                        </ul>
+                    </div>
+                    <div class="projectImages">
+                        <img src="img/work/dignans-catering-homepage.jpg" alt="Dignans Catering home page" class="projectPic">
+                        <img src="img/work/dignans-catering-contact.jpg" alt="Dignans Catering contact page" class="projectPic">
+                        <img src="img/work/dignans-catering-menus.jpg" alt="Dignans Catering menus page" class="projectPic">
+
+                    </div>
+                </div>
+                <div class="modalFooter">
+                    <a href="https://www.robinwilkie.co.uk/projects/dignans/index.html" target="_blank"><i class="fas fa-eye"></i>
+                        View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="projectModal10" class="modal" data-index="10">
+            <div class="modal-content">
+                <span class="closeBtn">&times;</span>
+                <div class="modalHeader">
+                    <h2>Robin Wilkie Website</h2>
+                </div>
+                <div class="modalBody">
+                    <div class="projectText">
+                        <p>Redesign and development - 2018</p>
+                        <h4>The Brief</h4>
+                        <p>This is the most recent version of my own personal website. For this version I have used CSS
+                            Grid and SASS so I could learn and use them in a real world project.</p>
+                        <h4>Included</h4>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>SASS</li>
+                            <li>Flexbox</li>
+                            <li>CSS Grid</li>
+                            <li>JS</li>
+                            <li>jQuery</li>
+                            <li>Photoshop</li>
+                            <li>Adobe Illustrator</li>
+                        </ul>
+                    </div>
+                    <div class="projectImages">
+                        <img src="img/work/robinwilkie-home.jpg" alt="Robin Wilkie home page" class="projectPic">
+                    </div>
+                </div>
+                <div class="modalFooter">
+                    <a href="https://www.robinwilkie.co.uk/projects/dignans/index.html" target="_blank"><i class="fas fa-eye"></i>
+                        View Project</a>
                 </div>
             </div>
         </div>
@@ -185,6 +598,7 @@
         &copy; Robin Wilkie - 2018
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
