@@ -89,9 +89,37 @@
       margin-bottom: 1rem;
       font-size: 2.6rem;
     }
+
+    &#about {
+      margin: 0 2vw;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
   }
 
   .about-info .robin-image {
+    width: 100%;
+  }
+
+  .job li {
+    text-align: left;
+  }
+
+  .modalBody {
+    flex-direction: column;
+  }
+
+  .projectText {
+    width: 100%;
+
+    li {
+      text-align: left;
+    }
+  }
+
+  .projectImages {
     width: 100%;
   }
 

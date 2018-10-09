@@ -397,6 +397,11 @@ main {
     padding: 0.7rem;
     border-radius: 5px; }
 
+.otherInfo {
+  margin-top: 2rem; }
+  .otherInfo a {
+    color: #c0a062; }
+
 .projects {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -508,7 +513,21 @@ main {
       line-height: 1;
       margin-bottom: 1rem;
       font-size: 2.6rem; }
+    main#about {
+      margin: 0 2vw; }
+    main p {
+      font-size: 1.1rem; }
   .about-info .robin-image {
+    width: 100%; }
+  .job li {
+    text-align: left; }
+  .modalBody {
+    flex-direction: column; }
+  .projectText {
+    width: 100%; }
+    .projectText li {
+      text-align: left; }
+  .projectImages {
     width: 100%; }
   .contactContainer {
     flex-direction: column; }

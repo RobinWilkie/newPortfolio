@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="google-site-verification" content="V4r9lw7q54hpLRxTy--9fsRuENylCD7bvbteV_5Xqc0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Robin Wilkie web design and development in Glasgow Scotland">
@@ -39,7 +40,7 @@
                     <a href="work.html" class="nav-link">Work</a>
                 </li>
                 <li class="nav-item current">
-                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="contact.php" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a href="https://www.robinwilkie.co.uk/blog/" target="_blank" class="nav-link">Blog</a>
@@ -62,6 +63,55 @@
                     <label>Message</label>
                     <textarea name="message" rows="6" cols="30" placeholder="Enter message here..." required></textarea>
                     <button class="hvr-ripple-out" type="submit" value="submit">Submit</button>
+                    <?php 
+    
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST'){ 
+                
+                    if (!isset($_POST['name']) || !isset($_POST['message']) || !isset($_POST['email'])){ 
+                
+                        $errors .= 'Please complete all the required fields.'; 
+                     } 
+                
+                    if ($_POST['name'] != "") { 
+                        $_POST['name'] = filter_var($_POST['name'], FILTER_SANITIZE_STRING); 
+                        if ($_POST['name'] == "") { 
+                            $errors .= 'Name is not valid.<br/>'; 
+                        }
+                    }
+                 
+                    if ($_POST['message'] != "") { 
+                        $_POST['message'] = filter_var($_POST['message'], FILTER_SANITIZE_STRING); 
+                        if ($_POST['message'] == "") { 
+                            $errors .= 'Message is not valid.<br/>'; 
+                        }
+                    }
+                 
+                    if ($_POST['email'] != "") { 
+                        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL); 
+                        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) { 
+                            $errors .= 'Email is not valid.<br/>'; 
+                        }
+                    }
+                 
+                    if(!$errors) { 
+                        $to = 'admin@robinwilkie.co.uk'; 
+                        $from = 'admin@robinwilkie.co.uk'; 
+                        $subject = 'Contact Form Completed'; 
+                        $content = "
+                        First Name: " . $_POST['name'] . "
+                        Message: " . $_POST['message'] . "
+                        Email: " . $_POST['email']; 
+                
+                        if(mail($to, $subject, $content, 'From:' . $from)){
+                            echo '<p class="alert alert-success">Thank you for contacting me, your message has been sent.</p>'; 
+                        } else { 
+                           echo '<p class="alert alert-danger">There was a problem sending your message</p>'; 
+                        } 
+                    } else { 
+                        echo '<p class="alert alert-danger">' . $errors . '</p>'; 
+                    }
+                }
+                ?>
                 </form>
             </div>
             <div class="contactLogo">
